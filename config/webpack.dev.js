@@ -3,6 +3,8 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json')
 
+const deps = packageJson.dependencies;
+
 const devConfig = {
   mode: 'development',
   output: {
@@ -21,7 +23,11 @@ const devConfig = {
         dashboard: 'dashboard@http://localhost:8083/remoteEntry.js',
         monoreporeact: 'monoreporeact@http://localhost:8084/remoteEntry.js'
       },
-      shared: packageJson.dependencies,
+      shared: {
+        ...deps,
+        react: { singleton: true, eager: true, requiredVersion: deps.react },
+        "react-dom": { singleton: true, eager: true, requiredVersion: deps["react-dom"] },
+      }
     })
   ]
 };
