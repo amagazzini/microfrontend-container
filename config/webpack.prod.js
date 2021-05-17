@@ -18,7 +18,7 @@ const prodConfig = {
         marketing: `marketing@${domain}/marketing/latest/remoteEntry.js`,
         auth: `auth@${domain}/auth/latest/remoteEntry.js`,
         dashboard: `dashboard@${domain}/dashboard/latest/remoteEntry.js`,
-        monoreporeact: `monoreporeact@${domain}/monoreporeact/latest/remoteEntry.js`,
+        monorepo: `monorepo@${domain}/monorepo/latest/remoteEntry.js`,
       },
       shared: packageJson.dependencies
     })

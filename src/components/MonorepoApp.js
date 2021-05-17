@@ -1,4 +1,4 @@
-import { mount } from 'monoreporeact/MonoreporeactApp';
+import { mount } from 'monorepo/MonorepoApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'
 
