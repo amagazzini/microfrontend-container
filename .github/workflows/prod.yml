@@ -1,9 +1,9 @@
-name: deploy-container
+name: deploy-prod
 
 on:
   push:
     branches:
-      - master
+      - main
 #    paths:
 #      - 'packages/marketing/**'
 
